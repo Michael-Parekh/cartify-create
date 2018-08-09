@@ -1,0 +1,713 @@
+/* START OF CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+     height: 100%;
+}
+
+.fill {
+	height: 3100px;
+}
+
+.gradient-wrapper {
+	height: 13000px;
+}
+
+#gradient {
+	width: 100%;
+	min-height: 100%;
+	/* Code Citation: W3 Schools CSS Gradients
+	   URL: https://www.w3schools.com/css/css3_gradients.asp
+	   Author: W3 Schools
+	   Accessed on: 4/15/18
+	   Purpose of code: Create a gradient background that shifts between light blue and white. */
+	background: linear-gradient(white, rgba(0,255,255,0.65));
+}
+
+.main-container {
+	margin-left: 3.50%;
+	margin-right: 3.50%:;
+}
+
+.entire-navbar {
+	margin: 1.5rem;
+	background-color: red;
+}
+
+.navbar-headers {
+	list-style-type: none;
+}
+
+.cart-link {
+	float: left;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	position: absolute;
+	left: 80%;
+	top: 35px;
+}
+
+.search-link {
+	float: left;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	position: absolute;
+	left: 70%;
+	top: 35px;
+}
+
+.login-link {
+	float: left;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	position: absolute;
+	left: 90%;
+	top: 35px;
+}
+
+.main-link {
+	float: left;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-decoration: none;
+}
+
+.form-control {
+	width: 20%;
+	font-size: 18px;
+	border: 2px solid rgba(51, 204, 255, 0.5);
+	font-family: 'Source Sans Pro', sans-serif;   
+	border-radius: 5px; 
+}
+
+.form-control-enter {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+.form-control-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+}
+
+.form-login-error {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12px;
+	color: rgba(0, 204, 255, 1);
+}
+
+.main-link2 {
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.form-register-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+}
+
+.welcome-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 35px;
+
+}
+
+.search-control {
+	width: 30%;
+	font-size: 17px;
+	border: 2px solid rgba(51, 204, 255, 0.5);
+	font-family: 'Source Sans Pro', sans-serif;   
+	border-radius: 5px; 
+	padding: 0px 1.5%;
+}
+
+.image-search-merge {
+	position: relative;
+}
+
+.search-icon-image {
+	position: relative;
+	right: 465px;
+	top: 4px;
+	height: 20px;
+	width: 20px;
+}
+
+.button-submit-register {
+	background-color: rgb(255, 255, 255);
+	font-family: 'Source Sans Pro', sans-serif;   
+	font-size: 14px;
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 4px;
+	transition-duration: 0.70s;
+	text-decoration: none;
+}
+
+.button-submit-register:hover {
+	background-color: rgba(51, 204, 255, 0.7);
+	text-decoration: none;
+}
+
+.button-submit {
+	background-color: rgb(255, 255, 255);
+	font-family: 'Source Sans Pro', sans-serif;   
+	font-size: 14px;
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 4px;
+	padding: 0px 3px;
+	transition-duration: 0.70s;
+}
+
+.button-submit:hover {
+	background-color: rgba(51, 204, 255, 0.5);
+}
+
+.intro-page-header {
+	font-family: 'Lato', sans-serif;
+	font-size: 60px;
+	position: relative;
+	animation: heading;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+	0% {top: -250px; opacity: 0.0;}
+	10% {opacity: 0.1;}
+	20% {opacity: 0.2;}
+	30% {opacity: 0.3;}
+	40% {opacity: 0.4;}
+	50% {opacity: 0.5;}
+	60% {opacity: 0.6;}
+	70% {opacity: 0.7;}
+	80% {opacity: 0.8;}
+	90% {opacity: 0.9;}
+	100% {top: 85px; opacity: 1.0;}
+}
+
+
+.intro-page-subheader {
+	font-family: 'Source Sans Pro', sans-serif;   
+	font-size: 30px;
+	position: relative;
+	animation: subheading;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes subheading {
+	0% {opacity: 0.0;}
+	50% {opacity: 0.0;}
+	60% {opacity: 0.2;}
+	70% {opacity: 0.4;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.8;}
+	100% {opacity: 1.0;}
+}
+
+
+.sub-heading-flip {
+	position: relative;
+	animation-name: wordswitch;
+	animation-duration: 9s;
+	animation-delay: 2.5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+}
+
+@keyframes wordswitch {
+	0% {color: rgb(102, 204, 255);}
+	10% {color: rgb(153, 204, 255);}
+	20% {color: rgb(0, 102, 255);}
+	30% {color: rgb(0, 153, 255);}
+	40% {color: rgb(51, 102, 255);}
+	50% {color: rgb(0, 204, 255);}
+	60% {color: rgb(0, 255, 255);}
+	70% {color: rgb(26, 255, 255);}
+	80% {color: rgb(133, 224, 224);}
+	90% {color: rgb(0, 122, 153);}
+	100% {color: rgb(128, 229, 255);}
+}
+
+
+.button-home-page-login {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 4px;
+	padding: 1px 3px;
+	position: absolute;
+	transition-duration: 0.8s;
+	top: 520px;
+	left: 54%;
+}
+
+.button-home-page-login:hover {
+	background-color: rgba(51, 204, 255, 0.9);
+	font-size: 21px;
+}
+
+
+.button-home-page-register {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 4px;
+	padding: 1px 3px;
+	position: absolute;
+	top: 520px;
+	left: 45%;
+	transition-duration: 0.8s;
+}
+
+.button-home-page-register:hover {
+	background-color: rgba(51, 204, 255, 0.3);
+	font-size: 21px;
+}
+
+
+.welcome-header-one {
+	font-family: 'Lato', sans-serif;
+	font-size: 50px;
+	position: relative;
+	animation: welcome_one;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes welcome_one {
+	0% {left: -650px; opacity: 0%;}
+	100% {left: 350px; opacity: 100%;}
+}
+
+
+.username-flip {
+	position: relative;
+	animation-name: wordswitch_username;
+	animation-duration: 9s;
+	animation-delay: 1.5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+}
+
+@keyframes wordswitch_username {
+	0% {color: rgb(77, 255, 77);}
+	10% {color: rgb(0, 255, 153);}
+	20% {color: rgb(0, 255, 204);}
+	30% {color: rgb(0, 153, 153);}
+	40% {color: rgb(0, 230, 230);}
+	50% {color: rgb(77, 255, 255);}
+	60% {color: rgb(0, 255, 255);}
+	70% {color: rgb(51, 204, 255);}
+	80% {color: rgb(102, 204, 255);}
+	90% {color: rgb(204, 255, 255);}
+	100% {color: rgb(153, 255, 153);}
+}
+
+
+.welcome-header-two {
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	position: relative;
+	animation: welcome_two;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	left: 435px;
+}
+
+@keyframes welcome_two {
+	0% {opacity: 0.0;}
+	50% {opacity: 0.0;}
+	60% {opacity: 0.2;}
+	70% {opacity: 0.4;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.8;}
+	100% {opacity: 1.0;}
+}
+
+
+.welcome-header-three {
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	position: relative;
+	animation: welcome_three;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	left: 535px;
+}
+
+@keyframes welcome_three {
+	0% {opacity: 0.0;}
+	50% {opacity: 0.0;}
+	60% {opacity: 0.2;}
+	70% {opacity: 0.4;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.8;}
+	100% {opacity: 1.0;}
+}
+
+
+.dashboard-button-one {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px; 
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 5px;
+	transition-duration: 0.8s;
+	position: absolute;
+	left: 717px;
+}
+
+.dashboard-button-one:hover {
+	background-color: rgba(26, 209, 255,1.0);
+}
+
+
+.dashboard-button-two {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px; 
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	border-radius: 5px;
+	transition-duration: 0.8s;
+	position: absolute;
+	left: 617px;
+}
+
+.dashboard-button-two:hover {
+	background-color: rgba(26, 209, 255,1.0);
+}
+
+
+.textbox {
+	width: 38%;
+	height: 95%;
+	border: 3px solid rgba(51, 204, 255, 0.7);
+	border-radius: 12px;
+	float: left;
+	margin: 4.75%;
+	text-align: center;
+}
+
+.price-av-header {
+	font-family: 'Lato', sans-serif;
+	font-size: 28px;
+}
+
+.search-page-cart {
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	border-radius: 5px;
+	border: 1px solid rgba(51, 204, 255, 0.5);
+	background-color: rgb(255,255,255);
+	transition-duration: 0.75s;
+	padding: 0px 3px;
+}
+
+.search-page-cart:hover {
+	background-color: rgba(26, 209, 255,1.0);
+}
+
+.name-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.price-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.brand-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.model-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.location-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.upc-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.sku-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.condition-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.availability-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.seller-label {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+}
+
+.checkboxes {
+	text-align: left;
+	margin-left: 8%;
+	line-height: 150%;
+	position: relative;
+	animation: checkboxes;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes checkboxes {
+	0% {opacity: 0.0;}
+	50% {opacity: 0.0;}
+	60% {opacity: 0.2;}
+	70% {opacity: 0.4;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.8;}
+	100% {opacity: 1.0;}
+}
+
+
+.display-image-search {
+	border-radius: 22px;
+	width: 450px;
+	height: 450px;
+	opacity: 1.0;
+	/* Code Citation: W3 Schools How TO - Zoom on Hover 
+	   URL: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+	   Author: W3 Schools
+	   Accessed on: 4/20/18
+	   Purpose of code: The images will expand when the mouse hovers on them, allowing the user to get a closer and larger view of the images (when used with "transform" below). */
+	transition: transform .2s;
+}
+
+.display-image-search:hover {
+	/* Code Citation: W3 Schools How TO - Zoom on Hover 
+	   URL: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+	   Author: W3 Schools
+	   Accessed on: 4/20/18
+	   Purpose of code: The images will expand when the mouse hovers on them, allowing the user to get a closer and larger view of the images (when used with "transition" above). */
+	transform: scale(1.35)
+}
+
+.main-search-button {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 17px;
+	text-decoration: bold;
+	border: 2px solid rgba(51, 204, 255, 0.5);
+	border-radius: 4px;
+	padding: 0px 2px;
+	background-color: rgb(255,255,255);
+	transition-duration: 0.75s;
+}
+
+.main-search-button:hover {
+	background-color: rgba(26, 209, 255,1.0);
+}
+
+.global-cart-main {
+	font-family: 'Lato', sans-serif;
+	font-size: 45px;
+	position: relative;
+	animation-name: downcart;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes downcart {
+	0% {top: -300px;}
+	100% {top: 0px;}
+}
+
+.global-flip {
+	position: relative;
+	animation-name: globalflip;
+	animation-duration: 7s;
+	animation-delay: 1.5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+}
+
+@keyframes globalflip {
+	0% {color: rgb(51, 51, 255);}
+	10% {color: rgb(77, 77, 255);}
+	20% {color: rgb(0, 51, 204);}
+	30% {color: rgb(0, 128, 255);}
+	40% {color: rgb(0, 153, 204);}
+	50% {color: rgb(0, 102, 153);}
+	60% {color: rgb(0, 153, 153);}
+	70% {color: rgb(0, 204, 153);}
+	80% {color: rgb(0, 255, 0);}
+	90% {color: rgb(0, 204, 102);}
+	100% {color: rgb(0, 179, 179);}
+}
+
+.global-cart-sub {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 26px;
+	animation-name: cartfade;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes cartfade {
+	0% {color: rgb(51, 51, 255); opacity: 0.0;}
+	100% {color: rgb(0,0,0); opacity: 1.0; }
+}
+
+.cart-box {
+	width: 38%;
+	height: 710px;
+	margin: 5%;
+	border: 3.5px solid rgba(51, 204, 255, 0.9);
+	border-radius: 20px;
+	float: left;
+}
+
+.posted-by {
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+}
+
+.posted-switch {
+	animation-name: postedswitch;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+@keyframes postedswitch {
+	0% {color: rgb(153, 255, 204);}
+	10% {color: rgb(153, 255, 153);}
+	20% {color: rgb(102, 255, 102);}
+	30% {color: rgb(51, 204, 51);}
+	40% {color: rgb(0, 255, 0);}
+	50% {color: rgb(0, 204, 153);}
+	60% {color: rgb(0, 153, 153);}
+	70% {color: rgb(0, 255, 255);}
+	80% {color: rgb(51, 204, 255);}
+	90% {color: rgb(102, 204, 255);}
+	100% {color: rgb(128, 255, 255);}
+}
+
+.global-image {
+	width: 425px;
+	height: 425px;
+	border-radius: 30px;
+	/* Code Citation: W3 Schools How TO - Zoom on Hover 
+	   URL: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+	   Author: W3 Schools
+	   Accessed on: 4/20/18
+	   Purpose of code: The images will expand when the mouse hovers on them, allowing the user to get a closer and larger view of the images (when used with "transform" below). */
+	transition: transform .2s;
+}
+
+.global-image:hover {
+	/* Code Citation: W3 Schools How TO - Zoom on Hover 
+	   URL: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+	   Author: W3 Schools
+	   Accessed on: 4/20/18
+	   Purpose of code: The images will expand when the mouse hovers on them, allowing the user to get a closer and larger view of the images (when used with "transition" above). */
+	transform: scale(1.35)
+}
+
+
+.name-one {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 20px;
+	float: left;
+}
+
+.name-one:after {
+    content: '\2192 ';
+}
+
+.name-two {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 20px;
+	float: left;
+}
+
+.name-two:after {
+    content: '\2192 ';
+}
+
+.name-three {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 20px;
+	float: left;
+}
+
+.name-three:after {
+    content: '\2192 ';
+}
+
+.name-four {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 20px;
+	float: left;
+}
+
+.name-four:after {
+    content: '\2192 ';
+}
+
+.name-five {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 20px;
+}
+
+.global-sub-container {
+	margin-left: 12%;
+	margin-right: 12%;
+	font-weight: bold;
+}
+
+.purchase-question {
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+}
+
+.global-page-cart {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 16px;
+	border: 2.5px solid rgba(51, 204, 255, 0.5);
+	border-radius: 5px;
+	padding: 0px 3px;
+	transition-duration: 0.7s;
+}
+
+.global-page-cart:hover {
+	background-color: rgba(26, 209, 255,1.0);
+}
+
+.register-error-message {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	color: rgba(0, 125, 255, 1.0);
+}
+
+/* END OF CSS */
+
+
