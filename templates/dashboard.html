@@ -1,0 +1,42 @@
+<!-- BEGINNING OF "DASHBOARD PAGE" HTML (dashboard.html) -->
+
+{% extends 'layout.html' %}
+{% block body %}
+	<body>
+		<div class="main-container">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<!-- Username is rendered from the Python once the user is successfully logged in. -->
+			<h1 class="welcome-header-one">Welcome to the cart, <strong class="username-flip">{{ username }}</strong>!</h1>
+			<br>
+			<br>
+			<br>
+			<h2 class="welcome-header-two">Shopping has never been so easy.</h2>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2 class="welcome-header-three">Find what you desire.</h2>
+			<br>
+			<br>
+			<a class="dashboard-button-link" href="/search"><button class="dashboard-button-one" type="button">Discover!</button></a>
+			<a class="dashboard-button-link" href="/cart"><button class="dashboard-button-two" type="button">Global Cart</button></a>
+		</div>
+	</body>
+{% endblock %}
+
+<!-- END OF "DASHBOARD PAGE" HTML (dashboard.html) -->
