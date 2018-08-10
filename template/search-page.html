@@ -1,0 +1,146 @@
+<!-- BEGINNING OF "SEARCH PAGE" HTML (search-page.html) -->
+
+{% extends 'layout.html' %}
+{% block body %}
+	<body>
+		<div class="fill">
+			<div class="main-container">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			<center>
+				<form action="" class="search-form" method="post">
+				<center>	
+					<div class="image-search-merge">
+						<input type="text" class="search-control" placeholder="Search an item..." name="search" value="{{request.form.search}}">
+
+						<!-- Image Citation: Find, in, magnifying glass, search, zoom icon
+							 URL: https://www.iconfinder.com/icons/97608/find_in_magnifying_glass_search_zoom_icon#size=256
+							 Author: Picons.me
+							 Accessed on 4/21/18 -->
+						<img class="search-icon-image" src="static/search-icon.png">
+
+					</div>
+					<br>
+					<button class="main-search-button" type="submit" name="search-button">Search</button>
+				</center> 
+			</form>
+				<br>
+				<h2 class="price-av-header">{{ price_av_final }}</h2>
+			</center>
+				<br>
+				<!-- Here I created a Python Flask "for loop" that says for each detail in the results, create a box and display those details in their proper positions (parallel lists). -->
+				{% for image, price, brand, model, name, geo_location, upc, other_price, other_condition, other_availability, other_seller, other_marketplace_name, other_sku, other_url in output_message %}
+					<div class="textbox">
+						<br>
+						<form name = "flask" action="/cart" method="POST">
+							<!-- Here I created "hidden" input types so that when the user adds something to the global cart, I can retrieve the details of that item. -->
+							<input type="hidden" name="image" value="{{ image }}">
+							<input type="hidden" name="name" value="{{ name }}">
+							<input type="hidden" name="price" value="{{ price }}">
+							<input type="hidden" name="brand" value="{{ brand }}">
+							<input type="hidden" name="model" value="{{ model }}">
+							<input type="hidden" name="location" value="{{ geo_location }}">
+							<input type="hidden" name="upc" value="{{ upc }}">
+							<input type="hidden" name="availability" value="{{ other_availability }}">
+							<input type="hidden" name="condition" value="{{ other_condition }}">
+							<input type="hidden" name="seller" value="{{ other_seller }}">
+							<input type="hidden" name="marketplace" value="{{ other_marketplace_name }}">
+							<input type="hidden" name="sku" value="{{ other_sku }}">
+							<input type="hidden" name="url" value="{{ other_url }}">
+
+							<input class="search-page-cart" type="submit" name="cart" value="Add to Global {{request.form.cart}}">
+							<a class="search-button-link" href="{{ other_url }}"><input class="search-page-cart" type="button" name="link" value="Buy it Now!"></a>
+						</form>
+							<br>
+							<br>	
+							<img class="display-image-search" src="{{ image }}">
+							<br>
+							<br>
+							<div class="checkboxes">
+
+								<!-- Code Citation: W3 Schools How TO - Custom Checkbox
+									 URL: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+									 Author: W3 Schools
+									 Accessed on: 4/21/18
+									 Purpose of code: Allow users to create a visual checklist and keep track of which items are more "favorable" to them. -->
+								<input type="checkbox">
+								<label class="name-label"><strong>What is the Name?</strong> {{ name }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="price-label"><strong>How Much?</strong> ${{ price }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="brand-label"><strong>What Brand? </strong>{{ brand }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="model-label"><strong>Specific Model?</strong> {{ model }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="location-label"><strong>Location?</strong> {{ geo_location }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="upc-label"><strong>UPC?</strong> {{ upc }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="sku-label"><strong>SKU Number?</strong> {{ other_sku }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="condition-label"><strong>What is the Condition?</strong> {{ other_condition }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="availability-label"><strong>Is it Available?</strong> {{ other_availability }}
+								<span class="checkmark"></span>
+								</label>
+								<br>
+								<input type="checkbox">
+								<label class="seller-label"><strong>Who is the Seller?</strong> {{ other_seller }}
+								<span class="checkmark"></span>
+								</label>
+
+							</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+{% endblock %}
+
+<!-- END OF "SEARCH PAGE" HTML (search-page.html) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
