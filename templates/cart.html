@@ -1,0 +1,57 @@
+<!-- BEGINNING OF "GLOBAL CART PAGE" HTML (cart.html) -->
+
+{% extends 'layout.html' %}
+{% block body %}
+<body>
+	<div class="gradient-wrapper">
+		<div class="main-container">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<center>
+				<h1 class="global-cart-main">What's in the <strong class="global-flip">global</strong> cart?</h1>
+				<br>
+				<h2 class="global-cart-sub">See what other people are craving.</h2>
+			</center>
+			<br>
+				<!-- Below I am using Python Flask to say that for each item in the global lists (parallel lists), create a new box. -->
+				{% for username, image, name, price, brand, model, location, upc, condition, availability, seller, marketplace, sku, url in output_cart_list %}
+					<div class="cart-box">
+						<center>
+							<h4 class="posted-by">Posted by: <strong class="posted-switch">{{ username }}</strong></h4>
+							<br>
+							<img class="global-image" src="{{ image }}">
+						</center>
+						<br>
+						<div class="global-sub-container">
+							<!-- Details from each item added to the global cart is rendered from Python. -->
+							<h4 class="name-one"><strong>{{ name }}</strong> </h4>
+							<h4 class="name-two"><strong> {{ model }} </strong> </h4>
+							<h4 class="name-three"><strong> ${{ price }} </strong></h4>
+							<h4 class="name-four"><strong> {{ availability }} </strong></h4>
+							<h4 class="name-five"><strong> {{ seller }} </strong></h4>
+							<br>
+							<br>
+						<center>
+							<h4 class="purchase-question">Do you want it too?</h4>
+							<br>
+							<a href="{{ url }}"><input class="global-page-cart" type="button" name="link" value="Buy it Now!"></a>
+						</center>
+						</div>
+					</div>
+				{% endfor %}
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>
+</body>
+{% endblock %}
+
+<!-- END OF "GLOBAL CART PAGE" HTML (cart.html) -->
+
+
