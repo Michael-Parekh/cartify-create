@@ -1,0 +1,43 @@
+<!-- BEGINNING OF "LOGIN PAGE" HTML (login.html) -->
+
+{% extends 'layout.html' %}
+{% block body %}
+	<body>
+		<div class="main-container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<center>
+			<h4 class="form-control-header">Welcome back! Did you miss anything?</h4>
+			<br>
+			<br>
+			<a class="main-link2" href="/"><h1 class="logo-header">Login to Cartify</h1></a>
+			<br>
+			<br>
+			<br>
+			<form action="/login" class="form-inline" method="post">
+				<input type="text" class="form-control" placeholder="Username" name="username" value="{{request.form.username}}">
+				<br>
+				<br>
+				<input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
+				<br>
+				<br>
+				<input class="button-submit" type="submit" value="Login">
+			</form>
+			<br>
+			<h4 class="form-login-error"> {{ error }}</h4>
+			<br>
+			<br>
+			<br>
+			<h4 class="form-register-header">Don't have an account yet? Hop on the cart!</h4>
+			<br>
+			<a class="button-submit-register" href="/register"><input class="button-submit-register" type="button" value="Register"></a>
+		</center>
+	</body>
+{% endblock %}
+
+<!-- END OF "LOGIN PAGE" HTML (login.html) -->
