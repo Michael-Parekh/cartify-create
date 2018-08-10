@@ -1,0 +1,61 @@
+<!-- BEGINNING OF MAIN HTML LAYOUT (layout.html) -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cartify | Shopping Made Easy</title>
+		<!-- Code Citation: StackOverflow CSS Problems with Flask Web App
+			 URL: https://stackoverflow.com/questions/13772884/css-problems-with-flask-web-app/13773304
+			 Author: Lee Ngo 
+			 Accessed on: 4/13/18
+			 Purpose of code: To connect the Flask application to an external stylesheet. -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+
+		<!-- Code Citation: Google Fonts Lato
+			 URL: https://fonts.google.com/specimen/Lato
+			 Author: Łukasz Dziedzic
+			 Accessed on: 4/13/18
+			 Purpose of code: Retrieve a unique font that will be used in the design of the application. -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+
+		<!-- Code Citation: Google Fonts Source Sans Pro
+			 URL: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro
+			 Author: Paul D. Hunt
+			 Accessed on: 4/14/18
+			 Purpose of code: Retrieve a unique font that will be used in the design of the application. -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+		<!-- Code Citation: Adding a favicon
+			 URL: http://flask.pocoo.org/docs/0.12/patterns/favicon/
+			 Author: Flask
+			 Accessed on: 4/14/18
+			 Purpose of code: Add an icon to the top of the tab. -->
+		<!-- Image Citation: Grocery Basket Icon # 236055 - Shopping Basket Clip Art, Free Vector Shopping Basket - 578
+			 URL: http://chittagongit.com/icon/grocery-basket-icon-26.html
+			 Author: Free Icons Library
+			 Accessed on: 4/14/18 -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+
+	</head>
+
+	<body>
+		<div id="gradient">
+			<div class="main-container">
+				<a class="main-link" href="/"><h1 class="logo-header">Cartify</h1></a>
+				<div class="sub-container-nav">
+					<nav class="entire-navbar">
+						<ul class="navbar-headers">
+							<a class="search-link" href="/search"><li class="search-header">Search</li></a>
+							<a class="cart-link" href="/cart"><li class="cart-header">Global</li></a>
+							<a class="login-link" href="/login"><li class="login-header">Login</li></a>
+						</ul>
+					</nav>
+				</div>
+			</div> 
+			<!-- HTML from the respective page (since I have seperate HTML files) is added in between the "blocks" here. -->
+			{% block body %}{% endblock%}
+		</div>
+	</body>
+</html>
+
+<!-- END OF MAIN HTML LAYOUT (layout.html) -->
