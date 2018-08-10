@@ -1,0 +1,49 @@
+<!-- BEGINNING OF "REGISTER PAGE" HTML (register.html) -->
+
+{% extends 'layout.html' %}
+{% block body %}
+	<body>
+		<div class="main-container">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<center>
+				<h4 class="form-control-header">Hop on the cart! Making shopping fun and easy, one product at a time.</h4>
+				<br>
+				<br>
+				<a class="main-link2" href="/"><h1 class="logo-header">Register to Cartify</h1></a>
+				<br>
+				<br>
+				<br>
+				<form action="" class="form-inline" method="POST">
+					<h5 class="form-control-enter">Username:</h5>
+					<input type="text" class="form-control" placeholder="Username" name="uregister" value="{{request.form.uregister}}">
+					<br>
+					<br>
+					<h5 class="form-control-enter">Email Address:</h5>
+					<input type="text" class="form-control" placeholder="Email" name="eregister" value="{{request.form.eregister}}">
+					<br>
+					<br>
+					<h5 class="form-control-enter">Password:</h5>
+					<input type="password" class="form-control" placeholder="Password" name="pregister" value="{{request.form.pregister}}">
+					<br>
+					<br>
+					<h5 class="form-control-enter">Repeat Password:</h5>
+					<input type="password" class="form-control" placeholder="Password" name="pregisterr" value="{{request.form.pregisterr}}">
+					<br>
+					<br>
+					<input class="button-submit-register" type="submit" value="Register!">
+				</form>
+				<br>
+				<!-- Error message (if exists) will be displayed below, rendered from the Python. -->
+				<h1 class="register-error-message">{{ message }}</h1>
+			</center>
+		</div>
+	</body>
+{% endblock %}
+
+<!-- END OF "REGISTER PAGE" HTML (register.html) -->
